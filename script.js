@@ -1,7 +1,7 @@
 // 配置参数
 //const apiBase = window.location.origin;
 //fetch(`${apiBase}/api/status`)
-const API_URL = ' https://e3e1-124-64-23-130.ngrok-free.app/api';
+const API_URL = ' https://7182-124-64-23-130.ngrok-free.app/api';
 
 const UPDATE_INTERVAL = 1000;  // 更新间隔（毫秒）
 
