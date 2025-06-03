@@ -1,7 +1,7 @@
 // 配置参数
 //const apiBase = window.location.origin;
 //fetch(`${apiBase}/api/status`)
-const API_URL = 'https://e3e1-124-64-23-130.ngrok-free.app/api';
+const API_URL = ' https://e3e1-124-64-23-130.ngrok-free.app/api';
 
 const UPDATE_INTERVAL = 1000;  // 更新间隔（毫秒）
 
@@ -67,7 +67,11 @@ function updateStatusDisplay(data) {
 // 更新传感器数据
 async function updateSensorData() {
     try {
-        const response = await fetch(`${API_URL}/status`);
+        const response = await fetch(`${API_URL}/status`,{
+    headers: {
+      'ngrok-skip-browser-warning': '12345',
+    },
+    });
         if (!response.ok) {
             throw new Error(`fishUpdtHTTP error! status: ${response.status}`);
         }
